@@ -4,15 +4,15 @@
 
 }
 body{
-    background: rgb(214, 214, 214);
+    background: rgb(255, 255, 255);
     color: black;
     font-family: Arial, Helvetica, sans-serif;
 }
 .bd{
     display: grid;
- grid-template-columns: repeat(3,1fr);
+ grid-template-columns: repeat(2,1fr);
  grid-template-rows: repeat(1,auto);
- grid-template-areas: "header header header"
+ grid-template-areas: "header header"
  
 }
 .header{
@@ -42,9 +42,10 @@ body{
     cursor: default;
 }
 .menu{
-    float: right;
-    line-height: 50px;
-    
+   display:flex;
+   flex-direction: row;
+   padding-top: 20px;
+   justify-content: flex-end;
    
 }
 .menu a{
@@ -56,11 +57,11 @@ body{
     transition: all 500ms ease;
 }
 .menu a:hover{
-    background:rgb(91, 245, 117);
+    background: rgb(92, 99, 197);
     transition: all 0.4s linear;
     border-radius: 10px 20px;
     border-bottom: 4px solid transparent;
-    color: black;
+    color: white;
    }
 .jumbotron{
     background: rgb(34, 36, 73);
@@ -104,23 +105,104 @@ body{
     font-size: 20px;
     color:rgb(238, 238, 238);
 }
+.blog{
+    background: rgb(34, 36, 73);
+
+    width: 100%;
+    max-width: 100%;
+    gap: 20px;
+    padding-left: 70px;
+    display:grid; 
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(1,auto);
+    grid-template-areas: 
+                          "card1 card2 card3";
+                            
+}
+.our{
+    padding-top:20px;
+     background: rgb(34, 36, 73); 
+    color:white;
+    font-size: 3rem;
+     text-align: center;
+}
+.blog .card1,
+.blog .card2,
+.blog .card3{
+    background:white;
+    width: 330px;
+    height: 530px;
+    border-radius: 8px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+}
+
+.blog .card1 h4{
+    font-size: 60px;
+    color:rgb(34, 36, 73);
+}
+.blog .card2 h4{
+    font-size: 60px;
+    color:rgb(34, 36, 73);
+}
+.blog .card3 h4{
+    font-size: 50px;
+    color:rgb(34, 36, 73);
+}
+.blog .card1:hover,
+.blog .card2:hover,
+.blog .card3:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+.blog p{
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.blog a {
+    font-weight: 500;
+    text-decoration: none;
+    color: #3498db;
+}
+.blog .card1{
+    grid-area: card1;
+}
+.blog .card2{
+    grid-area: card2;
+}
+.blog .card3{
+    grid-area: card3;
+}
+.blog img{
+    height: 350px;
+ background-size: cover;
+ background-attachment: fixed;
+}
 .Adicional {
-    height:500px;
-    background:rgb(221, 220, 226);
-    display: grid;
- grid-template-columns: repeat(2,1fr);
- grid-template-rows: repeat(1,auto);
- grid-template-areas: "img text"
+    width: 100%;
+    max-width: 100%;
+    gap: 20px;
+  
+    display:grid; 
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(1,auto);
+    grid-template-areas: 
+                          "img text";
 }
 .Adicional .text {
     background: rgb(34, 36, 73);
-    grid-area:text;
+    max-width: 100%;
     display: flex;
  padding-left: 70px;
  padding-right: 70px;
  padding-top: 80px;
   flex-direction: column;
-  
+ 
 }
 .Adicional h3{
     color:rgb(238, 238, 238);
@@ -177,4 +259,38 @@ footer .title {
 }
 .footer .p3 {
     grid-area: p3;
+}
+@media screen and (max-width: 900px) {
+      body {
+        background:black;
+    } 
+    .bd{
+    
+     grid-template-rows: repeat(1,auto);
+     grid-template-areas: "header header header"
+                           "header header header"
+    } 
+    .blog{
+        padding-top: 50px;
+         padding-left: 150px;
+        grid-template-areas: 
+                              "card1 card1 card1"
+                              "card2 card2 card2"
+                              "card3 card3 card3" ;
+
+
+                                
+    }
+    .Adicional {
+
+     grid-template-areas: "text text"
+                            "img img" ;
+    }
+    .footer{
+    
+     grid-template-areas: "p1 p1 p1"
+                           "p2 p2 p2"
+                           "p3 p3 p3";
+     
+    }
 }
