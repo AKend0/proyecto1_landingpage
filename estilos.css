@@ -187,7 +187,7 @@ body{
     width: 100%;
     max-width: 100%;
     gap: 20px;
-  
+    background: rgb(34, 36, 73);
     display:grid; 
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(1,auto);
