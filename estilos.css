@@ -274,9 +274,9 @@ footer .title {
         padding-top: 50px;
          padding-left: 150px;
         grid-template-areas: 
-                              "card1 card1 card1"
-                              "card2 card2 card2"
-                              "card3 card3 card3" ;
+                              "card1  card1 card1"
+                              "card2  card2 card2"
+                              "card3  card3 card3" ;
 
 
                                 
