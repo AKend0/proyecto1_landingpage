@@ -1,4 +1,4 @@
-*/*{
+*{
     margin: 0;
     padding: 0;
 
@@ -88,6 +88,14 @@ body{
      background-size: cover;
      background-attachment: fixed;
 }
+/* .jumbotron .img{
+   
+    display: flex;
+  text-align: center;
+  flex-direction: row;
+  justify-content: flex-end;
+  grid-area: img;
+} */
 .jumbotron h2{
     font-size: 50px;
     color:white;
@@ -170,4 +178,3 @@ footer .title {
 .footer .p3 {
     grid-area: p3;
 }
-/*
